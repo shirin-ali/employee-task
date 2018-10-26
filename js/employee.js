@@ -2,11 +2,11 @@ var employeeData =[],count =0,edit = false,editIndex = "",modal,btn,span,checkNa
 checkDesignation,checkDepartment,checkDob,checkContact,checkEmail,checkAddress,namevar,
 departmentVar,dobVar,contactVar,emailvar,addressvar,pathOfimage = "image/default-usertwo.jpg";
 
-window.onload = function() {
-  var retrievedObject = localStorage.getItem('employeeData');
-  employeeData =JSON.parse(retrievedObject);
-  updateView(employeeData);
-}
+// window.onload = function() {
+//   var retrievedObject = localStorage.getItem('employeeData');
+//   employeeData =JSON.parse(retrievedObject);
+//   updateView(employeeData);
+// }to store data into local storage remove comment after add first record 
 var openModel = function(){
 modal = document.getElementById('myModal');
 btn = document.getElementById("myBtn");
@@ -26,13 +26,13 @@ var closeModel =function() {
   edit = false;
   updateView(employeeData);
 }
-// window.onclick = function(event) {
-//   if (event.target == modal) {
-//       modal.style.display = "none";
-//       edit = false;
-//       updateView(employeeData);
-//   }
-// }to store data into local storage remove comment after add first record 
+window.onclick = function(event) {
+  if (event.target == modal) {
+      modal.style.display = "none";
+      edit = false;
+      updateView(employeeData);
+  }
+}
 var formValidate = function(){
    namevar = document.getElementById("name").value;
    designationVar = document.getElementById("designation").value;
