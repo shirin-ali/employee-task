@@ -26,13 +26,13 @@ var closeModel =function() {
   edit = false;
   updateView(employeeData);
 }
-window.onclick = function(event) {
-  if (event.target == modal) {
-      modal.style.display = "none";
-      edit = false;
-      updateView(employeeData);
-  }
-}
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//       modal.style.display = "none";
+//       edit = false;
+//       updateView(employeeData);
+//   }
+// }to store data into local storage remove comment after add first record 
 var formValidate = function(){
    namevar = document.getElementById("name").value;
    designationVar = document.getElementById("designation").value;
